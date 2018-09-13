@@ -126,6 +126,12 @@ const purchases = [{"owner":"Barry","price":103},{"owner":"Bob","price":75},
   Use a high order method to create to get the sum of bobsTotal.
 */
 
-let bobsTotal //Code Here
+let bobsTotal = purchases.reduce((total, current)=> {
+  if (current.owner === 'Bob') {
+    return total + current.price;
+  } else {
+    return total;
+  }
+}, 0) //Code Here
 
 
