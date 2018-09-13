@@ -41,6 +41,11 @@
 
 function showValues( obj ) {
   //Code Here
+  let ary = [];
+  for(let key in obj){
+    ary.push([obj[key]])
+  }
+  return ary.join('');
 }
 
 
@@ -55,7 +60,13 @@ function showValues( obj ) {
 
 //Code Here
 
-
+let greaterThan10 = (obj) => {
+  for(let key in obj){
+    if(obj[key] >10)
+    obj[key] = 0;
+  }
+  return obj;
+}
 
 ////////// PROBLEM 3 //////////
 
@@ -67,6 +78,12 @@ function showValues( obj ) {
 
 //Code Here
 
+let double = (obj) => {
+  for(let key in obj){
+    obj[key] *= 2;
+  }
+  return obj;
+}
 
 
 ////////// PROBLEM 4 //////////
@@ -81,7 +98,15 @@ function showValues( obj ) {
 
 //Code Here
 
-
+function secrets(obj) {
+  let empty = '';
+  for(let key in obj){
+    if(key.startsWith('sh')){
+      empty += obj[key];
+    }
+  }
+  return empty;
+}
 
 /* 
   Sometimes it's needed to delete object properties. 
